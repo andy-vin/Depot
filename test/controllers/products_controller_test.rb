@@ -62,6 +62,6 @@ class ProductsControllerTest < ActionController::TestCase
     ['Show', 'Edit', 'Destroy'].each do |action|
       assert_select '.products .list_actions a', action
     end
-    assert_select 'a', 'New Product'
+    assert_select 'a', 'Home'
   end
 end
