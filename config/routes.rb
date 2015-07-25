@@ -23,6 +23,14 @@ Depot::Application.routes.draw do
     root 'store#index', as: 'store', via: :all
   end
 
+  root  'static_pages#index'
+  match '/admin',    to: 'static_pages#admin',    via: 'get'
+  match '/login',   to: 'static_pages#login',   via: 'get'
+  match '/products', to: 'static_pages#products', via: 'get'
+  match '/products', to: 'static_pages#products', via: 'get'
+  match '/orders', to: 'static_pages#orders', via: 'get'
+  match '/carts', to: 'static_pages#carts', via: 'get'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
